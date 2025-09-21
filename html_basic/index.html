@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My First Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>James' First Cool Page</title>
+  <style>
+    /* Simple, modern look with readable type */
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #7dd3fc;
+      --text: #e6eef8;
+    }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg), #071021);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      padding:3rem 1rem;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{
+      max-width:900px;
+      width:100%;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      border-radius:12px;
+      padding:2rem;
+      box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(125,211,252,0.06);
+    }
+    header h1{
+      margin:.2rem 0 0.6rem 0;
+      font-size:2rem;
+      color:var(--accent);
+      letter-spacing:0.2px;
+    }
+    header p.lead{
+      margin:0 0 1.2rem 0;
+      color:#cfeffb;
+    }
+    h2 { color:#bfe8f9; margin-top:1.6rem; }
+    h3 { color:#9fdff6; margin-top:1.2rem; font-weight:600; }
+    .hero {
+      display:flex;
+      gap:1rem;
+      align-items:center;
+      margin-top:1rem;
+      background:linear-gradient(90deg, rgba(125,211,252,0.03), rgba(125,211,252,0.01));
+      padding:1rem;
+      border-radius:10px;
+    }
+    .hero img {
+      max-width:140px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    }
+    .cta {
+      margin-top:1rem;
+      display:inline-block;
+      padding:.5rem .9rem;
+      border-radius:8px;
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(125,211,252,0.22);
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer { margin-top:1.6rem; color:#9fbcd0; font-size:.95rem; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My First Portfolio</h1>
-  <p>This is my very first HTML page.</p>
+  <main class="wrap">
+    <header>
+      <h1>Welcome to My First Cool Page</h1>
+      <p class="lead">A tiny, stylish introduction to my very first HTML site. Built for learning, styled for fun.</p>
+    </header>
+
+    <section class="hero" aria-label="hero">
+      <!-- Clickable image — uses the provided image and links to your GitHub profile -->
+      <a href="https://github.com/galahadtg" target="_blank" rel="noopener noreferrer" title="Visit my GitHub">
+        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo">
+      </a>
+      <div>
+        <h2>Getting started</h2>
+        <p>This page demonstrates headings, paragraphs, and a clickable image that links to an outside URL (my GitHub profile).</p>
+        <p>Click the image to explore the repository and follow along on GitHub.</p>
+      </div>
+    </section>
+
+    <article>
+      <h2>About this project</h2>
+      <p>This small project is the first step in building a portfolio. It contains valid HTML structure, clear semantics, and helpful accessibility attributes.</p>
+
+      <h3>Why semantics matter</h3>
+      <p>Using proper headings and sectioning elements helps screen readers and search engines understand the content better.</p>
+
+      <p>Every paragraph here is intentionally short and focused — good practice when learning to structure content for the web.</p>
+
+      <p>This page also includes a responsive meta tag so the layout behaves well on phones and tablets.</p>
+    </article>
+
+    <footer>
+      <p>Created by James Appiah — <a class="cta" href="https://github.com/galahadtg/My_First_Portfolio" target="_blank" rel="noopener noreferrer">View repository</a></p>
+    </footer>
+  </main>
 </body>
 </html>
